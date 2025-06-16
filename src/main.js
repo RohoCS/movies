@@ -31,7 +31,7 @@ const inputHandler = e => {
   if (searchString === searchLast) return
   searchLast = searchString
   movies.innerHTML = ""
-  getData(`https://www.omdbapi.com/?apikey=ee2be59f&s=${searchString}`)
+  getData(`https://omdbapi.com/?apikey=ee2be59f&s=${searchString}`)
     .then(data => data.forEach(movie => addMovieToList(movie)))
     .catch(err => console.log(err))
 
